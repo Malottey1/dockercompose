@@ -7,7 +7,7 @@ services:
             - "5000:5000"
         environment:
             - REDIS_URL=redis://redis:6379
-            - DATABASE_URL=postgresql://malcolmclottey:securepassword@db:5432/malcolm_db
+            - DATABASE_URL=mysql://malcolmclottey:Naakey057@@db:3306/malcolm_db
         depends_on:
             - redis
             - db
@@ -18,10 +18,11 @@ services:
             - "6379:6379"
 
     db:
-        image: "postgres:alpine"
+        image: "mysql:5.7"
         environment:
-            POSTGRES_USER: malcolmclottey
-            POSTGRES_PASSWORD: Naakey057@
-            POSTGRES_DB: malcolm_db
+            MYSQL_ROOT_PASSWORD: rootpassword
+            MYSQL_DATABASE: malcolm_db
+            MYSQL_USER: malcolmclottey
+            MYSQL_PASSWORD: Naakey057@
         ports:
-            - "5432:5432"
+            - "3306:3306"
