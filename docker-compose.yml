@@ -21,7 +21,7 @@ services:
         image: "postgres:alpine"
         environment:
             POSTGRES_USER: malcolmclottey
-            POSTGRES_PASSWORD: securepassword
+            POSTGRES_PASSWORD: Naakey057@
             POSTGRES_DB: malcolm_db
         ports:
             - "5432:5432"
